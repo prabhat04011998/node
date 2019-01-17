@@ -11,12 +11,19 @@ http.createServer((req,serverRes)=>{
                 httpRes.setEncoding('UTF-8');
 
                 console.log(data); 
+                serverRes.write(data);
             })
             httpRes.on('end',()=>{
                 serverRes.end();
                 console.log('its over');
             })
         })
+
+    }
+    else
+    {
+        serverRes.writeHead(404,{'Content-type': 'text/plain'});
+        serverRes.end('404 Error');
 
     }
 }).listen(4444);
