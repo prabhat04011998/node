@@ -2,7 +2,7 @@
 //var flag = process.argv.indexOf('--user');
 //console.log(flag);
 
-process.stdout.write("ask me a question");
+process.stdout.write("ask me a question Right Now ");
 
 process.stdin.on('data', function(answer){
     console.log(answer.toString());
